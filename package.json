@@ -1,0 +1,31 @@
+{
+  "name": "minigameboards",
+  "version": "1.0.0",
+  "description": "Mini game board",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-server": "nodemon index.js",
+    "build-frontend": "react-scripts build",
+    "start-backend": "cd server && node scripts/setup.js",
+    "start-frontend": "cd frontend && npm start",
+    "build": "cd server && npm install && cd .. && cd frontend && npm install && npm run build",
+    "start": "concurrently \"npm-run-all -p start-backend start-frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dathh8/Mini-Game-Board.git"
+  },
+  "author": "dathh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dathh8/Mini-Game-Board/issues"
+  },
+  "homepage": "https://github.com/dathh8/Mini-Game-Board#readme",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
