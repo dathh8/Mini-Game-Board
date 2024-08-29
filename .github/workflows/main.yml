@@ -27,7 +27,7 @@ jobs:
             npm run build
             npm test
       - name: Build server
-        working-directory: ./back-end
+        working-directory: ./server
         run: |
             npm install
             pm2 stop "mini-game-board-server"
