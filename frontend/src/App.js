@@ -1,24 +1,30 @@
 import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import  Routers  from './modules/Router';
+import {createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+import rootReducer from './reducers/DataReducer';
+import AuthProvider from "./provider/AuthProvider";
 
 function App() {
+
+   // initialState
+   const initialState = {}
+
+   // Create store
+   const store = createStore(rootReducer, initialState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div class='main-app'>
+        <React.Suspense fallback={<div id="loader">.</div>}>
+          <AuthProvider>
+            <Routers />
+          </AuthProvider>
+        </React.Suspense>
+      </div>
+    </Provider>
   );
 }
 

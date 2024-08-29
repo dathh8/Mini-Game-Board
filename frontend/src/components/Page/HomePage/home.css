@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+header {
+    background-color: #2a2d35;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .logo a {
+    font-size: 18px;
+    color: #b0bec5;
+    margin-right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-items a {
+    color: #b0bec5;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-items a:hover {
+    color: #fff;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns the profile content to the right */
+}
+
+.user-profile .notifications {
+    margin-right: 10px;
+    position: relative;
+}
+
+.notification-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.user-name {
+    margin-right: 10px;
+    color: #ffcc00;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #555;
+    border-radius: 50%;
+    /* Add user profile image as background */
+    /* background-image: url('user-profile.jpg'); */
+    background-size: cover;
+}
+
+aside .sidebar {
+    background-color: #2a2d35;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #444;
+    margin-top: 53px; /* To avoid overlapping with the fixed header */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header .home {
+    color: #b0bec5;
+}
+
+.sidebar-header .active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.sidebar input[type="text"] {
+    padding: 10px;
+    background-color: #1c1c1c;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    height: calc(100vh - 220px); /* Adjust based on content */
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+    color: #b0bec5;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    color: #fff;
+}
+
+main {
+    margin-left: 270px;
+    padding: 80px 20px 20px 20px; /* Adjust padding to account for the fixed header */
+    background-color: #1c1c1c;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.section-header h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #b0bec5;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.news-banner {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.banner-item {
+    position: relative;
+    width: calc(50% - 5px);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.recent-games h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #b0bec5;
+}
+
+.games-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: #2a2d35;
+    width: calc(33.333% - 10px);
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.game-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.game-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
