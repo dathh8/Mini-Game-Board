@@ -9,6 +9,7 @@ const Header = React.lazy(() => import('../components/Header/header'));
 const Footer = React.lazy(() => import('../components/Footer/footer'));
 const HomePage = React.lazy(() => import('../components/Page/HomePage/home'));
 const BattleShip = React.lazy(() => import('../components/Page/BattleShip/battleShip'));
+const Xo = React.lazy(() => import('../components/Page/Xo/xo'));
 
 const Routes = () => {
   const { token } = useAuth();
@@ -22,6 +23,10 @@ const Routes = () => {
     {
       path: "/",
       element: <HomePage/>,
+    },
+    {
+      path: "/xo",
+      element: <Xo/>,
     },
   ];
 

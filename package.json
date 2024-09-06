@@ -8,9 +8,11 @@
     "build-server": "nodemon index.js",
     "build-frontend": "react-scripts build",
     "start-backend": "cd server && node scripts/setup.js",
+    "debug-backend": "cd server && npx nodemon --inspect index.js",
     "start-frontend": "cd frontend && npm start",
     "build": "cd server && npm install && cd .. && cd frontend && npm install && npm run build",
-    "start": "concurrently \"npm-run-all -p start-backend start-frontend\""
+    "start": "concurrently \"npm-run-all -p start-backend start-frontend\"",
+    "debug": "concurrently \"npm-run-all -p debug-backend start-frontend\""
   },
   "repository": {
     "type": "git",

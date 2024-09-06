@@ -1,8 +1,17 @@
 import React from 'react';
-import '../style.css'
+import '../style.css';
+import useWebSocket, { ReadyState } from "react-use-websocket";
 
 const BattleShip = () => {
-    
+  const { sendJsonMessage, readyState } = useWebSocket(process.env.REACT_APP_WEB_SOCKET_URL, {
+    onOpen: () => {
+      console.log("WebSocket connection established.");
+    },
+    share: true,
+    filter: () => false,
+    retryOnError: true,
+    shouldReconnect: () => true,
+  });
     return (
         <body>
         <div class="container">

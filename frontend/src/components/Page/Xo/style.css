@@ -1,0 +1,47 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #444;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.game input {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.game button {
+  padding: 5px 10px;
+}

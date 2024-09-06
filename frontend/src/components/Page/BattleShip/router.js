@@ -12,7 +12,7 @@ const BattleShipRouter = () => {
     <Routes> 
         <Route path="/" element={<Home/>} />
         <Route path="/multiplayer" element={<MultiPlayer/>} />
-        <Route path="/singleplayer" element={<SinglePlayer/>} />
+        <Route path="/single-player" element={<SinglePlayer/>} />
     </Routes>
   );
 };

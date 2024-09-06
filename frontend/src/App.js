@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import * as React from "react";
 import  Routers  from './modules/Router';
-import {createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 import rootReducer from './reducers/DataReducer';
@@ -16,15 +14,17 @@ function App() {
    const store = createStore(rootReducer, initialState);
 
   return (
-    <Provider store={store}>
-      <div class='main-app'>
-        <React.Suspense fallback={<div id="loader">.</div>}>
-          <AuthProvider>
-            <Routers />
-          </AuthProvider>
-        </React.Suspense>
-      </div>
-    </Provider>
+    <React.StrictMode>
+      <Provider store={store}>
+        <div class='main-app'>
+          <React.Suspense fallback={<div id="loader">.</div>}>
+            <AuthProvider>
+              <Routers />
+            </AuthProvider>
+          </React.Suspense>
+        </div>
+      </Provider>
+    </React.StrictMode>
   );
 }
 

@@ -1,6 +1,7 @@
 module.exports = {
     host : 'localhost',
     port : 3001,
+    ws_port:3002,
     db : {
         host: 'localhost',
         user: 'root',
